@@ -1,0 +1,69 @@
+<?php
+include __DIR__ . '/../config.php'
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" href="assets/f35-plain-white.svg" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap" rel="stylesheet">
+	<title>F35</title>
+</head>
+
+<body>
+	<header id="header">
+		<img src="assets/f35-plain-white.svg">
+		<nav id="header-nav">
+			<a href="">Hlavná stránka</a>
+			<a href="ulohy/ulohy.php">Úlohy INF</a>
+		</nav>
+	</header>
+	<script>
+		const header = document.getElementById("header");
+		let visible = false;
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 0 && !visible) {
+				header.classList.add('visible');
+				visible = true;
+			} else if (window.scrollY <= 0 && visible) {
+				header.classList.remove('visible');
+				visible = false;
+			}
+		});
+	</script>
+
+	<main>
+		<div id="hero">
+			<video src="assets/f35-hero.webm" autoplay loop muted playsinline preload="auto"
+				poster="assets/f35-hero-poster.webp"></video>
+			<small>Video: <a href="https://www.youtube.com/watch?v=B72Z6qVqNxI" target="_blank"
+					rel="noopener noreferrer">Youtube</a></small>
+			<h1>F35 Lighthing II</h1>
+		</div>
+		<section id="overview">
+			<h2>Prehľad</h2>
+			<p><a href="https://sk.wikipedia.org/wiki/Lockheed_Martin_F-35_Lightning_II" target="_blank"
+					rel="noopener noreferrer">F-35 Lightning II</a> je moderná viac-účelová stíhačka 5. generácie.
+				Dokáže plniť úlohy pozemných útokov,
+				prieskumu a vzdušnej obrany. Dostupná je v 3 variantoch: A, B, C.</p>
+			<h3>Hlavné vlastnosti</h3>
+			<ul>
+				<li>Schopnosti STOVL (Variant B)</li>
+				<li>AESA radar so systémom EW</li>
+				<li>Bez HUD - všetky informácie v prilbe pilota</li>
+				<li>Prepojenie a spolupráca s inými lietadlami</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<p>Branislav Farkaš sk. ALPHA - Pilot (Pilotovanie Lietadiel) - Posledná úprava:
+			<?= LAST_CHANGE ?>
+		</p>
+	</footer>
+</body>
+
+</html>
