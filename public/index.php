@@ -51,18 +51,45 @@ include __DIR__ . '/../config.php'
 				prieskumu a vzdušnej obrany. Dostupná je v 3 variantoch: A, B, C.</p>
 			<h3>Hlavné vlastnosti</h3>
 			<ul>
-				<li>Schopnosti STOVL (Variant B)</li>
-				<li>AESA radar so systémom EW</li>
-				<li>Bez HUD - všetky informácie v prilbe pilota</li>
-				<li>Prepojenie a spolupráca s inými lietadlami</li>
+				<li>
+					<p>Schopnosti STOVL (Variant B)</p>
+					<img src="assets/f35b-hover.webp" alt="F35-B hovering" loading="lazy">
+				</li>
+				<li>
+					<p>AESA radar so systémom EW</p>
+					<img src="assets/f35-radar.webp" alt="AN-APG-81 radar" loading="lazy">
+				</li>
+				<li>
+					<p>Bez HUD - všetky informácie v prilbe pilota</p>
+					<img src="assets/f35-hud.webp" alt="F35 HUD" loading="lazy">
+				</li>
+				<li>
+					<p>Prepojenie a spolupráca s inými lietadlami</p>
+					<img src="assets/f35-datalink.webp" alt="F35 datalink" loading="lazy">
+				</li>
 			</ul>
+		</section>
+
+		<section id="variants">
+			<h2>Varianty</h2>
+			<div>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<div>
+				</div>
+			</div>
 		</section>
 	</main>
 
 	<footer>
-		<p>Branislav Farkaš sk. ALPHA - Pilot (Pilotovanie Lietadiel) - Posledná úprava:
+		<span>Branislav Farkaš sk. ALPHA</span>
+		<span>Pilot (Pilotovanie Lietadiel)</span>
+		<span>Posledná úprava:
 			<?= LAST_CHANGE ?>
-		</p>
+		</span>
 	</footer>
 </body>
 
