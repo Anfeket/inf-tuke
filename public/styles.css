@@ -34,14 +34,14 @@ a:hover {
 	padding: 0 0.5rem;
 	width: 100%;
 	transition: background-color 0.3s, transform 0.3s;
-	transform: translateY(-100%);
-	background-color: transparent;
+	transform: none;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 100;
 }
 
-#header.visible {
-	background-color: rgba(0, 0, 0, 0.7);
-	transform: none;
-	z-index: 100;
+#header.hidden {
+	background-color: transparent;
+	transform: translateY(-100%);
 }
 
 #header img {

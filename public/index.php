@@ -1,21 +1,19 @@
-<?php
-include __DIR__ . '/../config.php'
-?>
+<?php include __DIR__ . '/../config.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
-	<link rel="shortcut icon" href="assets/f35-plain-white.svg" type="image/x-icon">
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="shortcut icon" href="/assets/f35-plain-white.svg" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap" rel="stylesheet">
 	<title>F35</title>
 </head>
 
 <body>
-	<header id="header">
-		<img src="assets/f35-plain-white.svg">
+	<header id="header" class="hidden">
+		<img src="/assets/f35-plain-white.svg">
 		<nav id="header-nav">
 			<a href="">Hlavná stránka</a>
 			<a href="ulohy/ulohy.php">Úlohy INF</a>
@@ -26,23 +24,23 @@ include __DIR__ . '/../config.php'
 		let visible = false;
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 0 && !visible) {
-				header.classList.add('visible');
+				header.classList.remove('hidden');
 				visible = true;
 			} else if (window.scrollY <= 0 && visible) {
-				header.classList.remove('visible');
+				header.classList.add('hidden');
 				visible = false;
 			}
 		});
 	</script>
 
 	<main>
-		<div id="hero">
+		<section id="hero">
 			<video src="assets/f35-hero.webm" autoplay loop muted playsinline preload="auto"
 				poster="assets/f35-hero-poster.webp"></video>
 			<small>Video: <a href="https://www.youtube.com/watch?v=B72Z6qVqNxI" target="_blank"
 					rel="noopener noreferrer">Youtube</a></small>
 			<h1>F35 Lighthing II</h1>
-		</div>
+		</section>
 		<section id="overview">
 			<h2>Prehľad</h2>
 			<p><a href="https://sk.wikipedia.org/wiki/Lockheed_Martin_F-35_Lightning_II" target="_blank"
@@ -84,18 +82,7 @@ include __DIR__ . '/../config.php'
 		</section>
 	</main>
 
-	<footer>
-		<span>Branislav Farkaš sk. ALPHA</span>
-		<span>Pilot (Pilotovanie Lietadiel)</span>
-		<?php if (BUILD_DATE && BUILD_COMMIT && BUILD_URL): ?>
-			<span>Posledná úprava:
-				<?= BUILD_DATE ?>
-			</span>
-			<span>Zdroj: <a href="<?= htmlspecialchars(BUILD_URL) ?>" rel="noopener noreferrer">
-					<?= BUILD_COMMIT ?>
-				</a></span>
-		<?php endif ?>
-	</footer>
+	<?php include ROOT . '/views/footer.php' ?>
 </body>
 
 </html>

@@ -11,3 +11,5 @@ if (file_exists($build_file)) {
 define('BUILD_COMMIT', $commit);
 define('BUILD_DATE', $date);
 define('BUILD_URL', $repo);
+
+define('ROOT', __DIR__);
