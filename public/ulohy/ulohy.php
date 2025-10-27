@@ -23,9 +23,10 @@
 			<h1>Index</h1>
 			<ul>
 				<?php foreach (scandir(__DIR__) as $file) {
-					if ($file === '.' || $file === '..' || $file === basename(__FILE__)) continue; ?>
+					if ($file === '.' || $file === '..' || $file === basename(__FILE__) || is_dir($file)) continue; ?>
 					<li><a href="<?= htmlspecialchars(urlencode($file)) ?>">
-							<?= htmlspecialchars($file) ?>
+							<?= htmlspecialchars($file) ?> -
+							<?= date(DATE_RSS, filemtime($file) ?? filectime($file)) ?>
 						</a></li>
 				<?php } ?>
 			</ul>
