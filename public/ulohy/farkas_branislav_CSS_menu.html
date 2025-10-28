@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Branislav Farkaš: CSS Stránka</title>
+</head>
+
+<body>
+	<nav>
+		<img src="assets/drevo.jpg">
+		<ul>
+			<li>Položka 1</li>
+			<li>Položka 2</li>
+			<li>Položka 3</li>
+			<li>Položka 4</li>
+			<li>CSS NavBar</li>
+		</ul>
+	</nav>
+	<h1>Lorem Ipsum</h1>
+	<main>
+		<q>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...</q>
+		<q><i>Nie je nikto, kto by mal rád bolesť samotnú, kto ju hľadá a chce ju mať, jednoducho lebo je to bolesť
+				...</i></q>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut tellus rhoncus, porttitor libero at,
+			interdum enim. Donec orci velit, convallis eget risus quis, scelerisque congue neque. Praesent enim nisl,
+			sodales cursus lacus eget, euismod blandit tortor. Etiam sollicitudin id mi ut rhoncus. Nam tincidunt turpis
+			justo, vitae consequat tellus cursus nec. Donec eget ipsum dictum, tincidunt dui et, feugiat risus.
+			Curabitur aliquam elit a augue varius ultricies. Nunc sed ipsum eget erat pharetra porta. Ut nisi tellus,
+			rutrum nec ex quis, ullamcorper rhoncus erat. Nam dolor arcu, lobortis at mattis quis, volutpat a nulla.
+			Aliquam sollicitudin tempus ornare.
+			<br><br>
+			Donec varius vehicula tincidunt. Praesent egestas eros turpis, non aliquet velit interdum eu. Etiam est
+			metus, tincidunt id felis id, placerat vulputate mauris. Nullam vulputate, sem ut ultricies facilisis,
+			mauris enim vulputate tortor, ac scelerisque purus dolor sit amet neque. Donec gravida turpis enim, eget
+			convallis lorem suscipit non. Vestibulum vel dictum est. In vehicula fermentum libero, et ultrices dui
+			ultricies eget. Pellentesque sit amet lorem imperdiet purus imperdiet feugiat.
+			<br><br>
+			Sed consequat metus ut mattis viverra. Nullam malesuada facilisis ante sed malesuada. Ut fringilla dolor in
+			mauris sollicitudin suscipit. Aliquam erat volutpat. Curabitur non ipsum posuere, accumsan nisi ut, feugiat
+			nibh. Integer mollis augue dolor, ac condimentum odio malesuada nec. Curabitur ac orci ex. Morbi aliquam
+			lobortis turpis, sed commodo diam. Integer iaculis urna sed ex finibus egestas. Nullam tincidunt vulputate
+			lorem nec consectetur. Cras aliquam mi at orci ullamcorper, id tincidunt quam volutpat. Fusce gravida
+			gravida sagittis.
+		</p>
+	</main>
+</body>
+
+<style>
+	body {
+		background-color: black;
+		color: white;
+		padding: 10px;
+	}
+
+	nav {
+		border: 1px solid yellow;
+	}
+
+	nav img {
+		width: 100%;
+		height: 150px;
+	}
+
+	ul {
+		border: inherit;
+		display: flex;
+		flex-direction: row;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	ul li {
+		background-color: darkred;
+		list-style-type: none;
+		flex: 1;
+		padding: 3px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	ul li:hover {
+		background-color: gray;
+	}
+
+	h1 {
+		background-color: red;
+		color: yellow;
+		text-align: center;
+		text-shadow: 2px 2px 2px black;
+		padding: 3px;
+		margin-bottom: 0;
+	}
+
+	main {
+		width: 100%;
+		background-color: white;
+		color: black;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	main p {
+		text-align: left;
+	}
+
+	main q {
+		display: block;
+		text-align: center;
+	}
+</style>
+
+</html>
