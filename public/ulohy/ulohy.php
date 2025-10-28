@@ -15,7 +15,7 @@
 		<img src="/assets/f35-plain-white.svg">
 		<nav id="header-nav">
 			<a href="/">Hlavná stránka</a>
-			<a href="ulohy/ulohy.php">Úlohy INF</a>
+			<a href="/ulohy/ulohy.php">Úlohy INF</a>
 		</nav>
 	</header>
 	<main>
