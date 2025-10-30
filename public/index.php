@@ -70,15 +70,59 @@
 
 		<section id="variants">
 			<h2>Varianty</h2>
-			<div>
+			<div id="variants-content">
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li><button class="variants-button active">
+							<p>F-35A</p>
+							<img src="assets/f35a.webp" alt="F35-A">
+						</button></li>
+					<li><button class="variants-button">
+							<p>F-35B</p>
+							<img src="assets/f35b.webp" alt="F35-B">
+						</button></li>
+					<li><button class="variants-button">
+							<p>F-35C</p>
+							<img src="assets/f35c.webp" alt="F35-C">
+						</button></li>
 				</ul>
-				<div>
+				<div id="variant-display">
+					<div id="variant-a" class="variant variant-active">
+						<h3>F35-A</h3>
+						<video src="assets/f35a.webm" autoplay loop muted playsinline></video>
+						<p>Variant s konvenčným vzletom a pristátím (CTOL) určený pre vzdušné sily USA, je vybavený
+							vnútorným 25mm kanónom a je najobratnejším variantom.</p>
+					</div>
+					<div id="variant-b" class="variant">
+						<h3>F35-B</h3>
+						<video src="assets/f35b.webm" autoplay loop muted playsinline></video>
+						<p>Variant s krátkým vzletom a vertikálnym pristátím (STOVL) určený pre US Marines (námorná
+							pechota) a lietadlové lode bez katapultu. Je vybavený s zdvihacím dúchadlom pre vertikálne
+							pristátia.</p>
+					</div>
+					<div id="variant-c" class="variant">
+						<h3>F35-C</h3>
+						<video src="assets/f35c.webm" autoplay loop muted playsinline></video>
+						<p>Variant s väčšími krídlami a zosilneným podvozkom pre lietadlové lode s katapultom. Má väčší
+							dolet a zlepšenú manévrovateľnosť pri nizších rychlostiach pre pristávanie.</p>
+					</div>
 				</div>
 			</div>
+			<script>
+				const buttons = document.querySelectorAll('.variants-button');
+				const variants = document.querySelectorAll('.variant');
+
+				buttons.forEach((btn, i) => {
+					btn.addEventListener('click', () => {
+						// deactivate all buttons and variants
+						buttons.forEach(b => b.classList.remove('active'));
+						variants.forEach(v => v.classList.remove('variant-active'));
+
+						// activate clicked button and corresponding variant
+						btn.classList.add('active');
+						variants[i].classList.add('variant-active');
+					});
+				});
+			</script>
 		</section>
 	</main>
 
