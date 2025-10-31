@@ -35,8 +35,11 @@
 
 	<main>
 		<section id="hero">
-			<video src="assets/f35-hero.webm" autoplay loop muted playsinline preload="auto"
-				poster="assets/f35-hero-poster.webp"></video>
+			<video autoplay loop muted playsinline preload="auto" poster="assets/f35-hero-poster.webp">
+				<source src="assets/f35-hero-av1.webm" type="video/webm">
+				<source src="assets/f35-hero-h265.mp4" type="video/mp4">
+				<source src="assets/f35-hero-h264.mp4" type="video/mp4">
+			</video>
 			<small>Video: <a href="https://www.youtube.com/watch?v=B72Z6qVqNxI" target="_blank"
 					rel="noopener noreferrer">Youtube</a></small>
 			<h1>F35 Lighthing II</h1>
