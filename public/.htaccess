@@ -1,0 +1,16 @@
+<IfModule mod_expires.c> 
+  ExpiresActive On
+  ExpiresDefault "access plus 4 hours"
+
+  # Images
+  ExpiresByType image/jpeg "access plus 1 week"
+  ExpiresByType image/png "access plus 1 week"
+  ExpiresByType image/gif "access plus 1 week"
+  ExpiresByType image/webp "access plus 1 week"
+  ExpiresByType image/svg+xml "access plus 1 week"
+  ExpiresByType image/x-icon "access plus 1 week"
+
+  # Video
+  ExpiresByType video/mp4 "access plus 1 week"
+  ExpiresByType video/webm "access plus 1 week"
+</IfModule>
