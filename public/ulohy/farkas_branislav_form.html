@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Farkaš Branislav: Formulár</title>
+</head>
+
+<body>
+	<section>
+		<form action="" method="post">
+			<table>
+				<tr>
+					<td><label for="meno">Meno</label></td>
+					<td><input type="text" name="meno" required></td>
+					<td><label for="priezvisko">Priezvisko</label></td>
+					<td><input type="text" name="priezvisko" required></td>
+				</tr>
+				<tr>
+					<td><label for="odbor">Odbor</label></td>
+					<td><input type="radio" name="odbor" value="tis" required>TIS<input type="radio" name="odbor"
+							value="ele">ELE
+					</td>
+					<td><label for="trieda">Trieda</label></td>
+					<td><select name="trieda" required>
+							<optgroup label="Prvý ročník">
+								<option value="1a">1.A</option>
+								<option value="1b">1.B</option>
+								<option value="1c">1.C</option>
+								<option value="1d">1.D</option>
+							</optgroup>
+							<optgroup label="Druhý ročník">
+								<option value="2a">2.A</option>
+								<option value="2b">2.B</option>
+								<option value="2c">2.C</option>
+								<option value="2d">2.D</option>
+							</optgroup>
+						</select></td>
+				</tr>
+				<tr>
+					<td><label for="volitelne">Voliteľné predmety</label></td>
+					<td colspan=3>
+						<input type="checkbox" name="volitelne" value="ins">INS
+						<input type="checkbox" name="volitelne" value="cvm">CVM
+						<input type="checkbox" name="volitelne" value="cuj">CUJ
+						<input type="checkbox" name="volitelne" value="pra">PRA
+					</td>
+				</tr>
+				<tr>
+					<td><label for="pripomienky">Pripomienky</label></td>
+					<td colspan=3>
+						<textarea name="pripomienky" rows=8 cols=60></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2><input type="reset"></td>
+					<td colspan=2><input type="submit"></td>
+				</tr>
+			</table>
+		</form>
+	</section>
+	<section>
+	</section>
+</body>
+
+<style>
+	td {
+		border: 1px solid black;
+		padding: 10px;
+		margin: 0;
+		background-color: darkgray;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	textarea {
+		resize: none;
+	}
+</style>
+
+</html>
