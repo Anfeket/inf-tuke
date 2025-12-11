@@ -6,6 +6,7 @@
 		<a href="/f35b.php">F35-B</a>
 		<a href="/f35c.php">F35-C</a>
 		<a href="/banner.php">Banner</a>
+		<a href="/ai.php">AI</a>
 		<a href="/ulohy/ulohy.php">Úlohy INF</a>
 	</nav>
 </header>
