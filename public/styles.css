@@ -283,6 +283,38 @@ a:hover {
 	overflow-x: auto;
 }
 
+.slide {
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slide img {
+	width: auto;
+	height: 90vh;
+	border-radius: 0.5rem;
+	object-fit: cover;
+}
+.slide button {
+	background-color: #555;
+	height: fit-content;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	margin: 0 0.5rem;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+}
+.slide button:hover {
+	background-color: #777;
+	cursor: pointer;
+}
+.slide svg {
+	fill: white;
+	width: 2rem;
+	height: 2rem;
+}
+
 footer {
 	display: flex;
 	padding: 0 1rem;
