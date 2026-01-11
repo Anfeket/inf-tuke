@@ -34,6 +34,7 @@
 				<li>Motor: Pratt &amp; Whitney F135-PW-100 turbovrtuľový motor s vektorovaním ťahu</li>
 			</ul>
 		</section>
+		<?php include ROOT . '/views/hlasovanie.php' ?>
 	</main>
 	<?php include ROOT . '/views/footer.php' ?>
 </body>

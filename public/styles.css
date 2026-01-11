@@ -249,6 +249,7 @@ a:hover {
 	margin-bottom: 1rem;
 	text-align: center;
 }
+
 #banner div img {
 	width: 80%;
 	height: auto;
@@ -289,12 +290,14 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 }
+
 .slide img {
 	width: auto;
 	height: 90vh;
 	border-radius: 0.5rem;
 	object-fit: cover;
 }
+
 .slide button {
 	background-color: #555;
 	height: fit-content;
@@ -305,14 +308,49 @@ a:hover {
 	border-radius: 0.5rem;
 	font-size: 1rem;
 }
+
 .slide button:hover {
 	background-color: #777;
 	cursor: pointer;
 }
+
 .slide svg {
 	fill: white;
 	width: 2rem;
 	height: 2rem;
+}
+
+#hlasovanie-options {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.hlasovanie-option {
+	background-color: #222;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	align-content: center;
+	cursor: pointer;
+}
+
+.hlasovanie-option:hover {
+	background-color: #333;
+	transform: scale(1.02);
+	transition: all 0.15s ease;
+}
+
+.hlasovanie-option img {
+	width: 100%;
+	height: auto;
+	border-radius: 0.5rem;
+	object-fit: cover;
+	display: block;
+	margin-bottom: 1rem;
 }
 
 footer {

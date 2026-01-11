@@ -34,6 +34,7 @@
 					dúchadlom v prednej časti</li>
 			</ul>
 		</section>
+		<?php include ROOT . '/views/hlasovanie.php' ?>
 	</main>
 	<?php include ROOT . '/views/footer.php' ?>
 </body>
