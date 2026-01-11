@@ -15,9 +15,8 @@
 			</div>
 			<h4>Skopíruj nižšie:</h4>
 			<pre>
-				<div id="banner">
-					<img src="https://f35.svidnik.org/assets/banner.png" alt="Banner obrázok">
-				</div>
+				&lt;div id="banner"&gt;
+				&lt;img src="https://f35.svidnik.org/assets/banner.png" alt="Banner obrázok"&gt;
 			</pre>
 			<button onclick="copyBannerCode()">Kopírovať kód</button>
 			<script>
