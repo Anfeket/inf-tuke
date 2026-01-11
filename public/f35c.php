@@ -10,7 +10,7 @@
 	<main>
 		<section id="variant-c" class="section variant">
 			<h3>F35-C</h3>
-			<video src="assets/f35c.webm" autoplay loop muted playsinline></video>
+			<video src="https://f35.svidnik.org/assets/f35c.webm" autoplay loop muted playsinline></video>
 			<p>Variant s väčšími krídlami a zosilneným podvozkom pre lietadlové lode s katapultom. Má väčší
 				dolet a zlepšenú manévrovateľnosť pri nizších rychlostiach pre pristávanie.</p>
 		</section>

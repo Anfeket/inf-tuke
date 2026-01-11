@@ -10,9 +10,9 @@
 	<main>
 		<section id="hero">
 			<video autoplay loop muted playsinline preload="auto" poster="assets/f35-hero-poster.webp">
-				<source src="assets/f35-hero-av1.webm" type="video/webm">
-				<source src="assets/f35-hero-h265.mp4" type="video/mp4">
-				<source src="assets/f35-hero-h264.mp4" type="video/mp4">
+				<source src="https://f35.svidnik.org/assets/f35-hero-av1.webm" type="video/webm">
+				<source src="https://f35.svidnik.org/assets/f35-hero-h265.mp4" type="video/mp4">
+				<source src="https://f35.svidnik.org/assets/f35-hero-h264.mp4" type="video/mp4">
 			</video>
 			<small>Video: <a href="https://www.youtube.com/watch?v=B72Z6qVqNxI" target="_blank"
 					rel="noopener noreferrer">Youtube</a></small>
@@ -28,19 +28,19 @@
 			<ul>
 				<li>
 					<p>Schopnosti STOVL (Variant B)</p>
-					<img src="assets/f35b-hover.webp" alt="F35-B hovering" loading="lazy">
+					<img src="https://f35.svidnik.org/assets/f35b-hover.webp" alt="F35-B hovering" loading="lazy">
 				</li>
 				<li>
 					<p>AESA radar so systémom EW</p>
-					<img src="assets/f35-radar.webp" alt="AN-APG-81 radar" loading="lazy">
+					<img src="https://f35.svidnik.org/assets/f35-radar.webp" alt="AN-APG-81 radar" loading="lazy">
 				</li>
 				<li>
 					<p>Bez HUD - všetky informácie v prilbe pilota</p>
-					<img src="assets/f35-hud.webp" alt="F35 HUD" loading="lazy">
+					<img src="https://f35.svidnik.org/assets/f35-hud.webp" alt="F35 HUD" loading="lazy">
 				</li>
 				<li>
 					<p>Prepojenie a spolupráca s inými lietadlami</p>
-					<img src="assets/f35-datalink.webp" alt="F35 datalink" loading="lazy">
+					<img src="https://f35.svidnik.org/assets/f35-datalink.webp" alt="F35 datalink" loading="lazy">
 				</li>
 			</ul>
 		</section>
@@ -50,15 +50,15 @@
 			<ul id="variants-list">
 				<li><a href="/f35a.php"><button class="variants-button">
 							<p>F-35A</p>
-							<img src="assets/f35a.webp" alt="F35-A">
+							<img src="https://f35.svidnik.org/assets/f35a.webp" alt="F35-A">
 						</button></a></li>
 				<li><a href="/f35b.php"><button class="variants-button">
 							<p>F-35B</p>
-							<img src="assets/f35b.webp" alt="F35-B">
+							<img src="https://f35.svidnik.org/assets/f35b.webp" alt="F35-B">
 						</button></a></li>
 				<li><a href="/f35c.php"><button class="variants-button">
 							<p>F-35C</p>
-							<img src="assets/f35c.webp" alt="F35-C">
+							<img src="https://f35.svidnik.org/assets/f35c.webp" alt="F35-C">
 						</button></a></li>
 			</ul>
 		</section>

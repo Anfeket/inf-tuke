@@ -15,42 +15,44 @@ define('BUILD_URL', $repo);
 define('ROOT', __DIR__);
 
 // env z .env (hosting)
-if (!defined('DB_LOADED')) {
+if (file_exists(__DIR__ . '/.env')) {
 	$lines = file(__DIR__ . '/.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	foreach ($lines as $line) {
 		if (str_starts_with(trim($line), '#')) continue;
 		[$name, $value] = array_map('trim', explode('=', $line, 2));
 		putenv("$name=$value");
 	}
-	define('DB_LOADED', true);
 }
 
 // databaza
-define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
-define('DB_NAME', getenv('DB_NAME') ?: 'f35_database');
-define('DB_USER', getenv('DB_USER') ?: 'f35_user');
-define('DB_PASS', getenv('DB_PASS') ?: 'f35_password');
+define('DB_HOST', getenv('DB_HOST'));
+define('DB_NAME', getenv('DB_NAME'));
+define('DB_USER', getenv('DB_USER'));
+define('DB_PASS', getenv('DB_PASS'));
 
-$pdo_dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4';
-try {
-	$pdo = new PDO($pdo_dsn, DB_USER, DB_PASS, [
-		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-		PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-	]);
-} catch (PDOException $e) {
-	die('Database connection failed: ' . $e->getMessage());
-}
-
-// tabulky
-try {
-	$pdo->query("SELECT 1 FROM votes LIMIT 1");
-} catch (PDOException $e) {
-	$create_table_sql = "
+if (DB_HOST || DB_NAME || DB_USER) {
+	$pdo_dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4';
+	try {
+		$pdo = new PDO($pdo_dsn, DB_USER, DB_PASS, [
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+		]);
+	} catch (PDOException $e) {
+		die('Database connection failed: ' . $e->getMessage());
+	}
+	// tabulky
+	try {
+		$pdo->query("SELECT 1 FROM votes LIMIT 1");
+	} catch (PDOException $e) {
+		$create_table_sql = "
 	CREATE TABLE votes (
 		id INT AUTO_INCREMENT PRIMARY KEY,
 		variant VARCHAR(10) NOT NULL,
 		vote_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 	) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 	";
-	$pdo->exec($create_table_sql);
+		$pdo->exec($create_table_sql);
+	}
+} else {
+	$pdo = null;
 }

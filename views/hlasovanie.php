@@ -6,15 +6,17 @@ $votes = [
 	'Total' => 0,
 ];
 
-$stmt = $pdo->prepare("SELECT variant, COUNT(*) AS vote_count FROM votes GROUP BY variant");
-$stmt->execute();
-$results = $stmt->fetchAll();
-foreach ($results as $row) {
-	$variant = $row['variant'];
-	$vote_count = (int)$row['vote_count'];
-	if (isset($votes[$variant])) {
-		$votes[$variant] = $vote_count;
-		$votes['Total'] += $vote_count;
+if ($pdo) {
+	$stmt = $pdo->prepare("SELECT variant, COUNT(*) AS vote_count FROM votes GROUP BY variant");
+	$stmt->execute();
+	$results = $stmt->fetchAll();
+	foreach ($results as $row) {
+		$variant = $row['variant'];
+		$vote_count = (int)$row['vote_count'];
+		if (isset($votes[$variant])) {
+			$votes[$variant] = $vote_count;
+			$votes['Total'] += $vote_count;
+		}
 	}
 }
 ?>
@@ -22,21 +24,21 @@ foreach ($results as $row) {
 	<h3>Ktorá verzia sa ti najviac páči?</h3>
 	<div id="hlasovanie-options">
 		<div class="hlasovanie-option" data-variant="F-35A">
-			<img src="assets/f35a.webp" alt="F-35A">
+			<img src="https://f35.svidnik.org/assets/f35a.webp" alt="F-35A">
 			<h3>Hlasovať za F-35A</h3>
 			<p>Hlasov:
 				<?php echo $votes['F-35A']; ?>
 			</p>
 		</div>
 		<div class="hlasovanie-option" data-variant="F-35B">
-			<img src="assets/f35b.webp" alt="F-35B">
+			<img src="https://f35.svidnik.org/assets/f35b.webp" alt="F-35B">
 			<h3>Hlasovať za F-35B</h3>
 			<p>Hlasov:
 				<?php echo $votes['F-35B']; ?>
 			</p>
 		</div>
 		<div class="hlasovanie-option" data-variant="F-35C">
-			<img src="assets/f35c.webp" alt="F-35C">
+			<img src="https://f35.svidnik.org/assets/f35c.webp" alt="F-35C">
 			<h3>Hlasovať za F-35C</h3>
 			<p>Hlasov:
 				<?php echo $votes['F-35C']; ?>

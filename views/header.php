@@ -1,5 +1,5 @@
 <header id="header" class="hidden">
-	<img src="/assets/f35-plain-white.svg">
+	<img src="https://f35.svidnik.org/assets/f35-plain-white.svg">
 	<nav id="header-nav">
 		<a href="/">Hlavná stránka</a>
 		<a href="/f35a.php">F35-A</a>

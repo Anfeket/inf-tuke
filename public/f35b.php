@@ -8,7 +8,7 @@
 	<main>
 		<section id="variant-b" class="section variant">
 			<h3>F35-B</h3>
-			<video src="assets/f35b.webm" autoplay loop muted playsinline></video>
+			<video src="https://f35.svidnik.org/assets/f35b.webm" autoplay loop muted playsinline></video>
 			<p>Variant s krátkým vzletom a vertikálnym pristátím (STOVL) určený pre US Marines (námorná
 				pechota) a lietadlové lode bez katapultu. Je vybavený s zdvihacím dúchadlom pre vertikálne
 				pristátia.</p>

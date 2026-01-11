@@ -11,10 +11,14 @@
 		<section id="banner" class="section">
 			<h3>Banner</h3>
 			<div>
-				<img src="assets/banner.png" alt="Banner obrázok">
+				<img src="https://f35.svidnik.org/assets/banner.png" alt="Banner obrázok">
 			</div>
 			<h4>Skopíruj nižšie:</h4>
-			<pre>&lt;div id="banner"&gt; &lt;img src="https://f35.svidnik.org/assets/banner.png" alt="Banner obrázok"&gt; &lt;/div&gt;</pre>
+			<pre>
+				<div id="banner">
+					<img src="https://f35.svidnik.org/assets/banner.png" alt="Banner obrázok">
+				</div>
+			</pre>
 			<button onclick="copyBannerCode()">Kopírovať kód</button>
 			<script>
 				function copyBannerCode() {

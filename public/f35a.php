@@ -10,7 +10,7 @@
 	<main>
 		<section id="variant-a" class="section variant">
 			<h3>F35-A</h3>
-			<video src="assets/f35a.webm" autoplay loop muted playsinline></video>
+			<video src="https://f35.svidnik.org/assets/f35a.webm" autoplay loop muted playsinline></video>
 			<p>Variant s konvenčným vzletom a pristátím (CTOL) určený pre vzdušné sily USA, je vybavený
 				vnútorným 25mm kanónom a je najobratnejším variantom.</p>
 		</section>
